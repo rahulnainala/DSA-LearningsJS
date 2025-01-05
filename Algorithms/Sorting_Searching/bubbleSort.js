@@ -18,6 +18,13 @@ function bubbleSort(arr) {
   console.log(arr);
 }
 
-var arr = [234, 43, 55, 63, 5, 6, 235, 547];
+function sortingArr(arr) {
+  let tempArr = arr.sort((a, b) => a - b);
+  console.log(tempArr);
+}
+
+var arr = [234, -3, 8, 43, 55, 63, 5, 6, 235, 547];
 
 bubbleSort(arr);
+
+sortingArr(arr);
