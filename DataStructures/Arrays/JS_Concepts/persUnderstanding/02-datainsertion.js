@@ -1,25 +1,37 @@
 const firstArray = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log("Main Array:", firstArray);
 
-//In the End of the array
-firstArray.pop(); //Removes one value from the end
-console.log("Pop:", firstArray);
-firstArray.push(10); //Adds the value '10' at the end
-console.log("Push:", firstArray);
+// Removing the last element of the array
+firstArray.pop(); // Removes the last element
+console.log("Pop (Remove last):", firstArray);
 
-//In the Start of the array
-firstArray.shift(); //Removes one value from the start
-console.log("Shift Array:", firstArray);
-firstArray.unshift(4); //Adds the value '4' at the start
-console.log("Unshift Array:", firstArray);
+// Adding an element to the end of the array
+firstArray.push(10); // Adds '10' at the end
+console.log("Push (Add at end):", firstArray);
 
-//Splice => Adds / Deletes a element from the array based on index
-//.splice(index,delete_count,value);
-firstArray.splice(3, 0, 5); //for index 3, delete 0 elements, insert value 5
-console.log("Splice Insert:", firstArray);
+// Removing the first element of the array
+firstArray.shift(); // Removes the first element
+console.log("Shift (Remove first):", firstArray);
 
-firstArray.splice(3, 1); //for index 3, delete 1 element from the index
-console.log("Splice Delete:", firstArray);
+// Adding an element to the start of the array
+firstArray.unshift(4); // Adds '4' at the start
+console.log("Unshift (Add at start):", firstArray);
 
-firstArray.splice(5, 1, 2); //for index 5, delete 1 element from index and insert value 2
-console.log("Splice Delete Insert:", firstArray);
+// Using splice to insert elements into the array
+firstArray.splice(3, 0, 5); // Inserts '5' at index 3, deletes 0 elements
+console.log("Splice Insert (index 3, add 5):", firstArray);
+
+// Using splice to delete an element from the array
+firstArray.splice(3, 1); // Deletes 1 element at index 3
+console.log("Splice Delete (index 3):", firstArray);
+
+// Using splice to delete and insert elements simultaneously
+firstArray.splice(5, 1, 2); // Deletes 1 element at index 5 and inserts '2'
+console.log("Splice Delete Insert (index 5, add 2):", firstArray);
+
+// Notes:
+// - `pop()` removes the last element.
+// - `push(value)` adds a new element to the end.
+// - `shift()` removes the first element.
+// - `unshift(value)` adds a new element to the start.
+// - `splice(index, deleteCount, ...items)` can insert, delete, or replace elements in an array.
