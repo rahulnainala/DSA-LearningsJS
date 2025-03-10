@@ -1,0 +1,6 @@
+	1.	Initialize a prefix sum array prefix[] of the same length as the input array.
+	2.	Set the first element of prefix[] to be the first element of the input array.
+	3.	Iterate through the array from index 1 to n-1, and for each element:
+	•	Compute the prefix sum using:
+prefix[i] = prefix[i-1] + arr[i]
+	4.	Use the prefix sum array for efficient range sum queries or other computations.
